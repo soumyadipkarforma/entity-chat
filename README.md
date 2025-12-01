@@ -31,8 +31,14 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Deploy on Render
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This application is configured as a standalone Node.js application, making it easy to deploy on [Render](https://render.com).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Fork or push this repository to your GitHub.
+2. Create a new **Web Service** on Render.
+3. Connect your repository.
+4. Render will automatically detect the `render.yaml` configuration (or you can manually set the Build Command to `npm install && npm run build` and Start Command to `node .next/standalone/server.js`).
+5. Click **Create Web Service**.
+
+Your ENTITY application will be live in minutes!
