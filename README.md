@@ -33,12 +33,14 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 ## Deploy on Render
 
-This application is configured as a standalone Node.js application, making it easy to deploy on [Render](https://render.com).
+This application is configured as a **Static Site**, making it extremely fast and free to host on [Render](https://render.com).
 
 1. Fork or push this repository to your GitHub.
-2. Create a new **Web Service** on Render.
+2. Create a new **Static Site** on Render.
 3. Connect your repository.
-4. Render will automatically detect the `render.yaml` configuration (or you can manually set the Build Command to `npm install && npm run build` and Start Command to `node .next/standalone/server.js`).
-5. Click **Create Web Service**.
+4. Render will automatically detect the configuration:
+   - **Build Command**: `npm install && npm run build`
+   - **Publish Directory**: `out`
+5. Click **Create Static Site**.
 
 Your ENTITY application will be live in minutes!

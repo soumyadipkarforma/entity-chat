@@ -1,12 +1,7 @@
 services:
   - type: web
     name: entity
-    env: node
+    env: static
     plan: free
     buildCommand: npm install && npm run build
-    startCommand: node .next/standalone/server.js
-    envVars:
-      - key: NODE_ENV
-        value: production
-      - key: PORT
-        value: 10000
+    staticPublishPath: ./out
