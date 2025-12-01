@@ -15,8 +15,11 @@ const geistMono = Geist_Mono({
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Puter Chat AI",
-  description: "A premium chat experience powered by Puter.js",
+  title: "ENTITY",
+  description: "A premium chat experience powered by ENTITY",
+  icons: {
+    icon: "/icon.svg",
+  },
 };
 
 export default function RootLayout({

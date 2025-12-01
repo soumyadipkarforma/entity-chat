@@ -85,10 +85,11 @@ export default function ChatInterface() {
             <div className="flex-1 overflow-y-auto p-8 space-y-6 scrollbar-thin scrollbar-thumb-white/10 scrollbar-track-transparent">
                 {messages.length === 0 && (
                     <div className="flex flex-col items-center justify-center h-full text-center text-gray-500 opacity-50">
-                        <div className="w-24 h-24 rounded-full bg-white/5 flex items-center justify-center mb-4">
-                            <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" /></svg>
+                        <div className="w-32 h-32 mb-6 relative">
+                            <img src="/logo.svg" alt="ENTITY Logo" className="w-full h-full object-contain drop-shadow-[0_0_30px_rgba(59,130,246,0.3)]" />
                         </div>
-                        <p className="text-lg">Start a conversation with AI</p>
+                        <h1 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600 mb-2">ENTITY</h1>
+                        <p className="text-lg text-gray-400">Your advanced AI companion</p>
                     </div>
                 )}
                 {messages.map((msg, idx) => (
