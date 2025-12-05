@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   title: "ENTITY",
   description: "A premium chat experience powered by ENTITY",
   icons: {
-    icon: "/icon.svg",
+    icon: "/entity-chat/icon.svg",
   },
 };
 
