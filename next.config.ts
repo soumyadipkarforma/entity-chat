@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const isProd = process.env.NODE_ENV === 'production';
 // !! REPLACE 'YOUR_REPO_NAME' with the actual name of your GitHub repository !!
-const repositoryName = 'chat.entity'; 
+const repositoryName = 'entity-chat'; 
 
 const nextConfig: NextConfig = {
   output: "export",
