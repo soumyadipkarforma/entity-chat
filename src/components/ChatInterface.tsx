@@ -86,7 +86,7 @@ export default function ChatInterface() {
                 {messages.length === 0 && (
                     <div className="flex flex-col items-center justify-center h-full text-center text-gray-500 opacity-50">
                         <div className="w-32 h-32 mb-6 relative">
-                            <img src="/logo.svg" alt="ENTITY Logo" className="w-full h-full object-contain drop-shadow-[0_0_30px_rgba(59,130,246,0.3)]" />
+                            <img src="/entity-chat/logo.svg" alt="ENTITY Logo" className="w-full h-full object-contain drop-shadow-[0_0_30px_rgba(59,130,246,0.3)]" />
                         </div>
                         <h1 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600 mb-2">ENTITY</h1>
                         <p className="text-lg text-gray-400">Your advanced AI companion</p>
