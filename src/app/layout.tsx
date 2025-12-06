@@ -14,11 +14,13 @@ const geistMono = Geist_Mono({
 
 import Script from "next/script";
 
+const basePath = process.env.NODE_ENV === 'production' ? '/entity-chat' : '';
+
 export const metadata: Metadata = {
   title: "ENTITY",
   description: "A premium chat experience powered by ENTITY",
   icons: {
-    icon: "/entity-chat/icon.svg",
+    icon: `${basePath}/icon.svg`,
   },
 };
 

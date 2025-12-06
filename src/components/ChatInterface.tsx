@@ -30,6 +30,8 @@ export default function ChatInterface() {
     const messagesEndRef = useRef<HTMLDivElement>(null);
     const textareaRef = useRef<HTMLTextAreaElement>(null);
 
+    const basePath = process.env.NODE_ENV === 'production' ? '/entity-chat' : '';
+
     useEffect(() => {
         const interval = setInterval(() => {
             const p = getPuter();
@@ -111,7 +113,7 @@ export default function ChatInterface() {
             <header className="flex items-center justify-between px-6 py-4 border-b border-white/5 bg-[#0f1117]/50 backdrop-blur-md z-10">
                 <div className="flex items-center gap-3">
                     <div className="w-8 h-8 relative">
-                        <img src="/logo.svg" alt="ENTITY" className="w-full h-full object-contain" />
+                        <img src={`${basePath}/logo.svg`} alt="ENTITY" className="w-full h-full object-contain" />
                     </div>
                     <span className="font-bold text-xl tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">ENTITY</span>
                 </div>
@@ -158,7 +160,7 @@ export default function ChatInterface() {
                         <div className="flex flex-col items-center justify-center min-h-[60vh] text-center space-y-6 animate-in fade-in zoom-in duration-500">
                             <div className="w-24 h-24 relative mb-4">
                                 <div className="absolute inset-0 bg-blue-500/20 blur-3xl rounded-full" />
-                                <img src="/logo.svg" alt="ENTITY" className="w-full h-full object-contain relative z-10 drop-shadow-[0_0_15px_rgba(59,130,246,0.5)]" />
+                                <img src={`${basePath}/logo.svg`} alt="ENTITY" className="w-full h-full object-contain relative z-10 drop-shadow-[0_0_15px_rgba(59,130,246,0.5)]" />
                             </div>
                             <h2 className="text-3xl font-bold text-white">How can I help you today?</h2>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-2xl mt-8">
@@ -187,8 +189,8 @@ export default function ChatInterface() {
 
                             <div className={`relative max-w-[85%] md:max-w-[75%] ${msg.role === 'user' ? '' : 'w-full'}`}>
                                 <div className={`px-5 py-4 rounded-2xl ${msg.role === 'user'
-                                        ? 'bg-blue-600 text-white rounded-br-sm shadow-blue-900/20 shadow-lg'
-                                        : 'bg-[#1a1d26] text-gray-100 rounded-bl-sm border border-white/5 shadow-xl'
+                                    ? 'bg-blue-600 text-white rounded-br-sm shadow-blue-900/20 shadow-lg'
+                                    : 'bg-[#1a1d26] text-gray-100 rounded-bl-sm border border-white/5 shadow-xl'
                                     }`}>
                                     {msg.role === 'assistant' ? (
                                         <div className="prose prose-invert prose-p:leading-relaxed prose-pre:bg-[#0f1117] prose-pre:border prose-pre:border-white/10 prose-pre:rounded-xl max-w-none">
@@ -256,8 +258,8 @@ export default function ChatInterface() {
                                 onClick={handleSend}
                                 disabled={loading || !input.trim()}
                                 className={`p-2 rounded-lg transition-all duration-200 ${input.trim() && !loading
-                                        ? 'bg-blue-600 text-white hover:bg-blue-500 shadow-lg shadow-blue-600/20'
-                                        : 'bg-white/5 text-gray-500 cursor-not-allowed'
+                                    ? 'bg-blue-600 text-white hover:bg-blue-500 shadow-lg shadow-blue-600/20'
+                                    : 'bg-white/5 text-gray-500 cursor-not-allowed'
                                     }`}
                             >
                                 {loading ? (
