@@ -3,7 +3,7 @@ name: Deploy Next.js site to GitHub Pages
 on:
   push:
     branches:
-      - ui-refactor-sticky-header
+      - main
 
 jobs:
   build:
