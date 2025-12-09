@@ -5,7 +5,7 @@
  Everyone is permitted to copy and distribute verbatim copies
  of this license document, but changing it is not allowed.
 
- # TERMS The GNU Affero General TERMSERMSa free, copyleft license for
+The GNU Affero General CONDCONDITIONSIONSIONS copyleft license for
 software and other kinds of works, specifically designed to ensure
 cooperation with the community in the case of network server software.
 
@@ -54,8 +54,7 @@ this license.
   The precise terms and conditions for copying, distribution and
 modification follow.
 
-  # TERMS AND CONDCONDITIONS
-  0. Definitions.
+  DefinitionsNDITIODefinitionsinitions.
 
   "This License" refers to version 3 of the GNU Affero General Public License.
 
